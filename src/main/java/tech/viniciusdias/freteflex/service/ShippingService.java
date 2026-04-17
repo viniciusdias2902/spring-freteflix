@@ -19,11 +19,10 @@ public class ShippingService {
     }
 
     public Double calculate(ShippingType shippingType, Double distance, Double weight) {
-        if (shippingType == STANDARD) {
-            return standardShippingCalculator.calculate(distance, weight);
-        }else if (shippingType == EXPRESS) {
-            return expressShippingCalculator.calculate(distance, weight);
-        }
-        return 0.0;
+        return switch (shippingType) {
+            case STANDARD -> standardShippingCalculator.calculate(distance, weight);
+            case EXPRESS -> expressShippingCalculator.calculate(distance, weight);
+            default -> null;
+        };
     }
 }
