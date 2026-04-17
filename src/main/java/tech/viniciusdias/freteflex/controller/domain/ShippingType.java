@@ -1,4 +1,4 @@
-package tech.viniciusdias.freteflex.controller.dto;
+package tech.viniciusdias.freteflex.controller.domain;
 
 public enum ShippingType {
     STANDARD,

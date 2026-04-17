@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import tech.viniciusdias.freteflex.controller.dto.ShippingResponse;
-import tech.viniciusdias.freteflex.controller.dto.ShippingType;
+import tech.viniciusdias.freteflex.controller.domain.ShippingType;
 import tech.viniciusdias.freteflex.service.ShippingService;
 
 @RestController()
