@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import tech.viniciusdias.freteflex.controller.dto.ShippingResponse;
+import tech.viniciusdias.freteflex.controller.dto.ShippingType;
 import tech.viniciusdias.freteflex.service.ShippingService;
 
 @RestController()
@@ -19,7 +20,7 @@ public class ShippingController {
     }
 
     @GetMapping(value = "/calculate")
-    public ResponseEntity<ShippingResponse> calculte(@RequestParam String shippingType,
+    public ResponseEntity<ShippingResponse> calculte(@RequestParam ShippingType shippingType,
                                                      @RequestParam Double distance,
                                                      @RequestParam Double weight) {
         Double cost = shippingService.calculate(shippingType, distance, weight);
