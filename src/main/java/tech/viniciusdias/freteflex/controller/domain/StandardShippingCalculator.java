@@ -1,9 +1,10 @@
 package tech.viniciusdias.freteflex.controller.domain;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value = "standardShippingCalculator")
 public class StandardShippingCalculator implements ShippingCalculator{
     @Override
     public Double calculate(Double distance, Double weight) {
