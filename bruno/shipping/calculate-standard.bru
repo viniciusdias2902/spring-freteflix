@@ -1,0 +1,17 @@
+meta {
+  name: Calculate Standard Shipping
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/shipping/calculate
+  body: none
+  auth: none
+}
+
+params:query {
+  shippingType: standard
+  distance: 100
+  weight: 10
+}

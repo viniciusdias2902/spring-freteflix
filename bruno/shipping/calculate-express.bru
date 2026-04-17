@@ -1,0 +1,17 @@
+meta {
+  name: Calculate Express Shipping
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/shipping/calculate
+  body: none
+  auth: none
+}
+
+params:query {
+  shippingType: express
+  distance: 100
+  weight: 10
+}
